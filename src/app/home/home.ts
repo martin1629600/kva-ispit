@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import axios from 'axios';
 import { ToyModel } from '../../models/toys.models';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

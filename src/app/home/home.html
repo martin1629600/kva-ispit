@@ -1,12 +1,19 @@
+    @if(toys().length > 0){
 <ul>
     @for(t of toys(); track $index){
     <li>
-        <h5>Naziv igracke</h5>
+        <h5><strong>{{t.name}}</strong></h5>
 <ul>
     <li>ID: <strong>{{t.toyId}}</strong></li>
     <li>Description: <strong>{{t.description}}</strong></li>
     <li>Price: <strong>{{t.price}}</strong></li>
+    <li>Detalji: <a [routerLink]="`/details/${t.toyId}`">Detalji</a></li>
 </ul>
     </li>
 }
 </ul>
+}
+    @else {
+    <h3>Podaci se ucitavaju</h3>
+    <p>Molimo sacekajte...</p>
+}
