@@ -1,0 +1,42 @@
+{
+  "hash": "a1112a25",
+  "configHash": "fad25cd3",
+  "lockfileHash": "5fec218f",
+  "browserHash": "56af40fc",
+  "optimized": {
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "48e25781",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "1e6aa183",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "034c1d27",
+      "needsInterop": false
+    },
+    "axios": {
+      "src": "../../../../../../node_modules/axios/index.js",
+      "file": "axios.js",
+      "fileHash": "2a7d75cc",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "core-l1vVDnYc": {
+      "file": "core-l1vVDnYc.js",
+      "isDynamicEntry": false
+    },
+    "platform-browser-DZ9b1dko": {
+      "file": "platform-browser-DZ9b1dko.js",
+      "isDynamicEntry": false
+    }
+  }
+}
