@@ -2,10 +2,13 @@ import { Component, signal } from '@angular/core';
 import axios from 'axios';
 import { ToyModel } from '../../models/toys.models';
 import { RouterLink } from "@angular/router";
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink],
+  imports: [RouterLink, MatCardModule, MatButtonModule],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

@@ -1,1 +1,14 @@
-<p>ID: <strong>{{toyId()}}</strong></p>
+@if(toy()) {
+    <ul>
+        <li>Name: {{toy()?.name}}</li>
+        <li>Target group: {{toy()?.targetGroup}}</li>
+        <li>Description: {{toy()?.description}}</li>
+        <li>Production date {{toy()?.productionDate}}</li>
+        <li>Price: {{toy()?.price}}</li>
+        <li>Picture: 
+            <img [src]="'https://toy.pequla.com' + toy()?.imageUrl" alt="">
+        </li>
+    </ul>
+}
+
+<!-- //https://toy.pequla.com -->

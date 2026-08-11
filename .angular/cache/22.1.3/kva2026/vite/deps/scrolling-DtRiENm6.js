@@ -1,11 +1,12 @@
 import { $n as Output, Bl as hasLift, Do as ɵɵgetInheritedFactory, Dr as ViewEncapsulation, Ec as Injector, El as ɵɵdefineInjector, En as ElementRef, Er as ViewContainerRef, Hl as Observable, In as Input, Kl as SafeSubscriber, Mr as afterNextRender, O as booleanAttribute, Pc as NgZone, Rl as Subject, Rs as ɵɵstyleProp, S as ViewChild, Tc as InjectionToken, Ui as setClassMetadata, Vl as operate, Yl as Subscription, Yo as ɵɵloadQuery, _s as ɵɵqueryRefresh, ar as RendererFactory2, au as __read, ba as ɵɵclassProp, bl as signal, ca as ɵɵNgOnChangesFeature, cn as Component, do as ɵɵdomElementStart, dr as Service, el as effect, eo as ɵɵdefineComponent, io as ɵɵdefineService, ir as Renderer2, is as ɵɵprojectionDef, la as ɵɵProvidersFeature, mc as DestroyRef, nl as forwardRef, no as ɵɵdefineNgModule, oc as ɵɵviewQuery, ol as inject, oo as ɵɵdomElement, ou as __spreadArray, p as IterableDiffers, pc as DOCUMENT, qn as NgModule, qt as untracked, r as ChangeDetectorRef, rs as ɵɵprojection, ru as __extends, sa as ɵɵInheritDefinitionFeature, tn as ApplicationRef, to as ɵɵdefineDirective, ua as ɵɵadvance, uo as ɵɵdomElementEnd, vr as TemplateRef, wn as Directive, zl as createOperatorSubscriber } from "./core-Cz0Y9r6B.js";
 import { a as asyncScheduler, c as dateTimestampProvider, i as async, n as coerceNumberProperty, o as AsyncScheduler, r as distinctUntilChanged, s as AsyncAction, t as coerceElement } from "./_element-chunk-Dxgzy1XW.js";
-import { d as isScheduler, i as of, n as filter, s as innerFrom, t as switchMap } from "./switchMap-CUitNj_M.js";
+import { r as innerFrom, s as isScheduler } from "./from-BBpehZQ-.js";
+import { i as of, n as filter, t as switchMap } from "./switchMap-Ce5JavSE.js";
 import { t as isObservable } from "./isObservable-CYQLks8G.js";
-import { n as startWith, t as takeUntil } from "./takeUntil-CuZfzho4.js";
+import { n as startWith, t as takeUntil } from "./takeUntil-Dr__hVNk.js";
+import { i as Directionality, t as BidiModule } from "./bidi-CIMRJ465.js";
 import "./common-Be9KhGNM.js";
 import { t as Platform } from "./_platform-chunk-B3P0jqKZ.js";
-import { i as Directionality, t as BidiModule } from "./bidi-CIMRJ465.js";
 //#region node_modules/rxjs/dist/esm5/internal/operators/refCount.js
 function refCount() {
 	return operate(function(source, subscriber) {
@@ -1728,4 +1729,4 @@ var ScrollingModule = class ScrollingModule {
 	}], null, null);
 })();
 //#endregion
-export { ViewportRuler as _, CdkVirtualForOf as a, CdkVirtualScrollableElement as c, DEFAULT_SCROLL_TIME as d, FixedSizeVirtualScrollStrategy as f, VIRTUAL_SCROLL_STRATEGY as g, VIRTUAL_SCROLLABLE as h, CdkScrollableModule as i, CdkVirtualScrollableWindow as l, ScrollingModule as m, CdkFixedSizeVirtualScroll as n, CdkVirtualScrollViewport as o, ScrollDispatcher as p, CdkScrollable as r, CdkVirtualScrollable as s, CDK_VIRTUAL_SCROLL_VIEWPORT as t, DEFAULT_RESIZE_TIME as u, _fixedSizeVirtualScrollStrategyFactory as v, supportsScrollBehavior as y };
+export { ViewportRuler as _, CdkVirtualForOf as a, timer as b, CdkVirtualScrollableElement as c, DEFAULT_SCROLL_TIME as d, FixedSizeVirtualScrollStrategy as f, VIRTUAL_SCROLL_STRATEGY as g, VIRTUAL_SCROLLABLE as h, CdkScrollableModule as i, CdkVirtualScrollableWindow as l, ScrollingModule as m, CdkFixedSizeVirtualScroll as n, CdkVirtualScrollViewport as o, ScrollDispatcher as p, CdkScrollable as r, CdkVirtualScrollable as s, CDK_VIRTUAL_SCROLL_VIEWPORT as t, DEFAULT_RESIZE_TIME as u, _fixedSizeVirtualScrollStrategyFactory as v, supportsScrollBehavior as y };
