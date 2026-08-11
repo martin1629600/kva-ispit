@@ -1,28 +1,29 @@
-<h1>HOME</h1>
-
 @if (toys().length > 0) {
   <div class="wrapper">
     @for (t of toys(); track t.toyId) {
-      <mat-card class="toy-card" appearance="outlined">
-        <mat-card-header>
-          <mat-card-title>{{ t.name }}</mat-card-title>
-        </mat-card-header>
-        <img [src]="'https://toy.pequla.com' + t.imageUrl" [alt]="t.name" />
+      <mat-card class="toy-card" appearance="outlined" [routerLink]="`/details/${t.toyId}`">
+        <img [src]="utils.getImageUrl(t)" />
         <mat-card-content>
-          <p>
-            {{ t.description }}
-          </p>
-          <p>Uzrast: {{ t.ageGroup.name }}</p>
-          <p>Cena: {{ t.price }}</p>
+          <mat-card-header>
+            <mat-card-title>{{ t.name }}</mat-card-title>
+            <mat-card-subtitle> {{ t.price }} RSD</mat-card-subtitle>
+          </mat-card-header>
         </mat-card-content>
         <mat-card-actions>
-          <button matButton [routerLink]="`/details/${t.toyId}`">Details</button>
-          <button matButton>Add to cart</button>
+          @if (service.getActiveUser()) {
+            <button matButton (click)="$event.stopPropagation()">
+              Add to cart <mat-icon fontIcon="add_shopping_cart"></mat-icon>
+            </button>
+          }
         </mat-card-actions>
       </mat-card>
     }
   </div>
 } @else {
-  <h3>Podaci se ucitavaju</h3>
-  <p>Molimo sacekajte...</p>
+  <mat-card class="loading-card">
+    <mat-card-content>
+      <mat-spinner></mat-spinner>
+      <h3>Loading</h3>
+    </mat-card-content>
+  </mat-card>
 }

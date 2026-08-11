@@ -1,7 +1,7 @@
 import { Dr as ViewEncapsulation, El as ɵɵdefineInjector, En as ElementRef, In as Input, Ta as ɵɵcontentQuery, Ui as setClassMetadata, Yo as ɵɵloadQuery, _s as ɵɵqueryRefresh, a as ContentChildren, ba as ɵɵclassProp, cn as Component, eo as ɵɵdefineComponent, is as ɵɵprojectionDef, no as ɵɵdefineNgModule, ol as inject, pc as DOCUMENT, qn as NgModule, rs as ɵɵprojection, to as ɵɵdefineDirective, wn as Directive, ya as ɵɵclassMap } from "./core-Cz0Y9r6B.js";
-import { t as BidiModule } from "./bidi-CIMRJ465.js";
 import { t as Platform } from "./_platform-chunk-B3P0jqKZ.js";
-import "./platform-ZigwPJ7v.js";
+import "./platform-drsQxUAh.js";
+import { t as BidiModule } from "./bidi-CIMRJ465.js";
 //#region node_modules/@angular/material/fesm2022/toolbar.mjs
 var _c0 = ["*", [["mat-toolbar-row"]]];
 var _c1 = ["*", "mat-toolbar-row"];

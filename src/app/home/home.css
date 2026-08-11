@@ -5,3 +5,26 @@
 .title {
   display: flex;
 }
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.toy-card {
+  cursor: pointer;
+}
+
+.toy-card:hover {
+  transform: scale(1.02);
+}
+
+.loading-card {
+  max-width: 420px;
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}

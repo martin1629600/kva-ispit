@@ -1,14 +1,15 @@
-mat-toolbar{
-    display: flex;
-    justify-content: space-between;
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
 }
 
-.spacer{
-    flex: 1 1 auto;
+.spacer {
+  flex: 1 1 auto;
 }
 
-.wrapper{
-    max-width: 90%;
-    margin: auto;
-    margin-right: auto;
+.wrapper {
+  max-width: 90%;
+  margin: auto;
+  margin-right: auto;
+  margin-top: 5px;
 }

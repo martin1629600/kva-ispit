@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+.login-card {
+  width: 400px;
+}
+
+.login-header {
+  display: flex;
+  justify-content: center;
+}
+
+.login-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+}

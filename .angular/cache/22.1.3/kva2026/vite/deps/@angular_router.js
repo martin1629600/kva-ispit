@@ -1,25 +1,18 @@
-import { $n as Output, Bc as PendingTasksInternal, Bt as computed, Ec as Injector, Ei as provideAppInitializer, El as ɵɵdefineInjector, En as ElementRef, Er as ViewContainerRef, Fn as Injectable, Hc as RuntimeError, Hl as Observable, Il as map, In as Input, Io as ɵɵinjectAttribute, Jo as ɵɵlistener, Kc as Version, Ll as BehaviorSubject, Mn as IS_HYDRATION_DOM_REUSE_ENABLED, Mr as afterNextRender, Ns as ɵɵsanitizeUrlOrResourceUrl, O as booleanAttribute, Pc as NgZone, Ql as isFunction$1, Rl as Subject, Ta as ɵɵcontentQuery, Tc as InjectionToken, Ti as performanceMarkFeature, Tl as ɵɵdefineInjectable, Ui as setClassMetadata, Ul as pipe, Vl as operate, Wl as identity, Wt as linkedSignal, X as input, Yl as Subscription, Yn as NgModuleFactory$1, Yo as ɵɵloadQuery, Yt as APP_BOOTSTRAP_LISTENER, Zl as createErrorClass, _c as EnvironmentInjector, _i as isNgModule, _s as ɵɵqueryRefresh, a as ContentChildren, an as ChangeDetectionStrategy, ao as ɵɵdirectiveInject, bl as signal, ca as ɵɵNgOnChangesFeature, cl as isInjectable, cn as Component, dr as Service, el as effect, eo as ɵɵdefineComponent, et as maybeUnwrapDefaultExport, f as HostAttributeToken, fl as makeEnvironmentProviders, fn as Console, ft as reflectComponentType, gl as provideEnvironmentInitializer, hc as ENVIRONMENT_INITIALIZER, ho as ɵɵelement, io as ɵɵdefineService, ir as Renderer2, ji as publishNonCoreGlobalUtil, jn as IS_ENABLED_BLOCKING_INITIAL_NAVIGATION, kl as ɵɵinject, kn as HostListener, mc as DestroyRef, ml as promiseWithResolvers, nn as Attribute, no as ɵɵdefineNgModule, ol as inject, on as Compiler, pc as DOCUMENT, qn as NgModule, qo as ɵɵinvalidFactory, qr as createEnvironmentInjector, qt as untracked, r as ChangeDetectorRef, su as __values, tl as formatRuntimeError, tn as ApplicationRef, to as ɵɵdefineDirective, ul as isStandalone, va as ɵɵattribute, vi as isPromise, vl as runInInjectionContext, wc as INTERNAL_APPLICATION_ERROR_HANDLER, wn as Directive, yc as EventEmitter, zl as createOperatorSubscriber } from "./core-Cz0Y9r6B.js";
-import { n as combineLatest, r as EMPTY, t as take } from "./take-DrpgF7TY.js";
-import { r as innerFrom, t as from } from "./from-BBpehZQ-.js";
-import { i as of, n as filter, r as mergeMap, t as switchMap } from "./switchMap-Ce5JavSE.js";
+import { $n as Output, Bc as PendingTasksInternal, Bt as computed, Ec as Injector, Ei as provideAppInitializer, El as ɵɵdefineInjector, En as ElementRef, Er as ViewContainerRef, Fn as Injectable, Hc as RuntimeError, Hl as Observable, Il as map, In as Input, Io as ɵɵinjectAttribute, Jo as ɵɵlistener, Kc as Version, Ll as BehaviorSubject, Mn as IS_HYDRATION_DOM_REUSE_ENABLED, Mr as afterNextRender, Ns as ɵɵsanitizeUrlOrResourceUrl, O as booleanAttribute, Pc as NgZone, Rl as Subject, Ta as ɵɵcontentQuery, Tc as InjectionToken, Ti as performanceMarkFeature, Tl as ɵɵdefineInjectable, Ui as setClassMetadata, Ul as pipe, Vl as operate, Wl as identity, Wt as linkedSignal, X as input, Yl as Subscription, Yn as NgModuleFactory$1, Yo as ɵɵloadQuery, Yt as APP_BOOTSTRAP_LISTENER, Zl as createErrorClass, _c as EnvironmentInjector, _i as isNgModule, _s as ɵɵqueryRefresh, a as ContentChildren, an as ChangeDetectionStrategy, ao as ɵɵdirectiveInject, bl as signal, ca as ɵɵNgOnChangesFeature, cl as isInjectable, cn as Component, dr as Service, el as effect, eo as ɵɵdefineComponent, et as maybeUnwrapDefaultExport, f as HostAttributeToken, fl as makeEnvironmentProviders, fn as Console, ft as reflectComponentType, gl as provideEnvironmentInitializer, hc as ENVIRONMENT_INITIALIZER, ho as ɵɵelement, io as ɵɵdefineService, ir as Renderer2, ji as publishNonCoreGlobalUtil, jn as IS_ENABLED_BLOCKING_INITIAL_NAVIGATION, kl as ɵɵinject, kn as HostListener, mc as DestroyRef, ml as promiseWithResolvers, nn as Attribute, no as ɵɵdefineNgModule, ol as inject, on as Compiler, pc as DOCUMENT, qn as NgModule, qo as ɵɵinvalidFactory, qr as createEnvironmentInjector, qt as untracked, r as ChangeDetectorRef, su as __values, tl as formatRuntimeError, tn as ApplicationRef, to as ɵɵdefineDirective, ul as isStandalone, va as ɵɵattribute, vi as isPromise, vl as runInInjectionContext, wc as INTERNAL_APPLICATION_ERROR_HANDLER, wn as Directive, yc as EventEmitter, zl as createOperatorSubscriber } from "./core-Cz0Y9r6B.js";
+import { t as EMPTY } from "./empty-BlnH25o_.js";
+import { t as innerFrom } from "./innerFrom-DTOf5TM2.js";
+import { t as from } from "./from-B-NQ0IDr.js";
+import { n as of, t as switchMap } from "./switchMap-feH5s67x.js";
+import { n as throwError, t as catchError } from "./catchError-CT1pqodu.js";
 import { t as isObservable } from "./isObservable-CYQLks8G.js";
-import { i as mergeAll, n as startWith, r as concat, t as takeUntil } from "./takeUntil-Dr__hVNk.js";
-import { F as finalize, I as concatMap, P as HashLocationStrategy, s as Title } from "./platform-browser-2MxAwXoZ.js";
+import { t as combineLatest } from "./combineLatest-CCUY4sGq.js";
+import { n as mergeMap, t as filter } from "./filter-CxXmYwQ3.js";
+import { i as mergeAll, n as startWith, r as concat, t as takeUntil } from "./takeUntil-CvikSTrs.js";
+import { F as finalize, I as concatMap, s as Title } from "./platform-browser-C0GVVWwc.js";
+import { t as take } from "./take-CtPHqG3M.js";
 import { t as tap } from "./tap-oIOh8zpf.js";
 import { a as PRECOMMIT_HANDLER_SUPPORTED, c as Location, h as PlatformLocation, l as LocationStrategy, m as LOCATION_INITIALIZED, o as PlatformNavigation, r as ViewportScroller, t as NavigationAdapterForLocation, u as PathLocationStrategy } from "./common-Be9KhGNM.js";
-//#region node_modules/rxjs/dist/esm5/internal/observable/throwError.js
-function throwError(errorOrErrorFactory, scheduler) {
-	var errorFactory = isFunction$1(errorOrErrorFactory) ? errorOrErrorFactory : function() {
-		return errorOrErrorFactory;
-	};
-	var init = function(subscriber) {
-		return subscriber.error(errorFactory());
-	};
-	return new Observable(scheduler ? function(subscriber) {
-		return scheduler.schedule(init, 0, subscriber);
-	} : init);
-}
-//#endregion
+import { n as HashLocationStrategy } from "./_common_module-chunk-CLpwjLS-.js";
 //#region node_modules/rxjs/dist/esm5/internal/util/EmptyError.js
 var EmptyError = createErrorClass(function(_super) {
 	return function EmptyErrorImpl() {
@@ -33,28 +26,6 @@ var EmptyError = createErrorClass(function(_super) {
 function defer(observableFactory) {
 	return new Observable(function(subscriber) {
 		innerFrom(observableFactory()).subscribe(subscriber);
-	});
-}
-//#endregion
-//#region node_modules/rxjs/dist/esm5/internal/operators/catchError.js
-function catchError(selector) {
-	return operate(function(source, subscriber) {
-		var innerSub = null;
-		var syncUnsub = false;
-		var handledResult;
-		innerSub = source.subscribe(createOperatorSubscriber(subscriber, void 0, void 0, function(err) {
-			handledResult = innerFrom(selector(err, catchError(selector)(source)));
-			if (innerSub) {
-				innerSub.unsubscribe();
-				innerSub = null;
-				handledResult.subscribe(subscriber);
-			} else syncUnsub = true;
-		}));
-		if (syncUnsub) {
-			innerSub.unsubscribe();
-			innerSub = null;
-			handledResult.subscribe(subscriber);
-		}
 	});
 }
 //#endregion

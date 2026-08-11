@@ -1,14 +1,36 @@
-@if(toy()) {
-    <ul>
-        <li>Name: {{toy()?.name}}</li>
-        <li>Target group: {{toy()?.targetGroup}}</li>
-        <li>Description: {{toy()?.description}}</li>
-        <li>Production date {{toy()?.productionDate}}</li>
-        <li>Price: {{toy()?.price}}</li>
-        <li>Picture: 
-            <img [src]="'https://toy.pequla.com' + toy()?.imageUrl" alt="">
-        </li>
-    </ul>
+@if (toy()) {
+  <div class="details-wrapper">
+    <mat-card class="details-card">
+      <mat-card-content>
+        <img [src]="utils.getImageUrl(toy()!)" alt="" class="details-image" />
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="details-card">
+      <mat-card-content>
+        <h1>{{ toy()?.name }}</h1>
+        <mat-list>
+          <mat-list-item>
+            <span matListItemTitle>Target group: {{ toy()?.targetGroup }}</span>
+          </mat-list-item>
+          <mat-list-item>Description: {{ toy()?.description }}</mat-list-item>
+          <mat-list-item>
+            <span matListItemTitle
+              >Production date: {{ utils.formatDate(toy()!.productionDate) }}</span
+            >
+          </mat-list-item>
+          <mat-list-item>Price: {{ toy()?.price }}</mat-list-item>
+        </mat-list>
+      </mat-card-content>
+      <mat-card-actions>
+        @if (service.getActiveUser()) {
+          <button matButton (click)="$event.stopPropagation()">
+            Add to cart <mat-icon fontIcon="add_shopping_cart"></mat-icon>
+          </button>
+        }
+      </mat-card-actions>
+    </mat-card>
+  </div>
 }
 
 <!-- //https://toy.pequla.com -->
