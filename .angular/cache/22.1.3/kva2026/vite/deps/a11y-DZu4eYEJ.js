@@ -7,9 +7,18 @@ import { a as skip, o as debounceTime, r as BreakpointObserver } from "./_animat
 import { t as distinctUntilChanged } from "./distinctUntilChanged-Ci4eEgFq.js";
 import "./common-Be9KhGNM.js";
 import { t as Platform } from "./_platform-chunk-B3P0jqKZ.js";
-import { t as _CdkPrivateStyleLoader } from "./_style-loader-chunk-BiWphaqx.js";
 import { n as coerceNumberProperty, t as coerceElement } from "./_element-chunk-DhzePnMe.js";
+import { t as _CdkPrivateStyleLoader } from "./_style-loader-chunk-BiWphaqx.js";
 import { n as _setInnerHtml, t as _VisuallyHiddenLoader } from "./private-BE-0oy_o.js";
+//#region node_modules/@angular/cdk/fesm2022/_fake-event-detection-chunk.mjs
+function isFakeMousedownFromScreenReader(event) {
+	return event.buttons === 0 || event.detail === 0;
+}
+function isFakeTouchstartFromScreenReader(event) {
+	const touch = event.touches && event.touches[0] || event.changedTouches && event.changedTouches[0];
+	return !!touch && touch.identifier === -1 && (touch.radiusX == null || touch.radiusX === 1) && (touch.radiusY == null || touch.radiusY === 1);
+}
+//#endregion
 //#region node_modules/@angular/cdk/fesm2022/_shadow-dom-chunk.mjs
 var shadowDomIsSupported;
 function _supportsShadowDom() {
@@ -54,15 +63,6 @@ function supportsPassiveEventListeners() {
 }
 function normalizePassiveListenerOptions(options) {
 	return supportsPassiveEventListeners() ? options : !!options.capture;
-}
-//#endregion
-//#region node_modules/@angular/cdk/fesm2022/_fake-event-detection-chunk.mjs
-function isFakeMousedownFromScreenReader(event) {
-	return event.buttons === 0 || event.detail === 0;
-}
-function isFakeTouchstartFromScreenReader(event) {
-	const touch = event.touches && event.touches[0] || event.changedTouches && event.changedTouches[0];
-	return !!touch && touch.identifier === -1 && (touch.radiusX == null || touch.radiusX === 1) && (touch.radiusY == null || touch.radiusY === 1);
 }
 //#endregion
 //#region node_modules/@angular/cdk/fesm2022/_focus-monitor-chunk.mjs
@@ -1462,4 +1462,4 @@ var ConfigurableFocusTrapFactory = class ConfigurableFocusTrapFactory {
 	(typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ConfigurableFocusTrapFactory, [{ type: Service }], () => [], null);
 })();
 //#endregion
-export { FocusMonitor as a, normalizePassiveListenerOptions as c, _getShadowRoot as d, ObserversModule as i, _getEventTarget as l, InteractivityChecker as n, isFakeMousedownFromScreenReader as o, CdkObserveContent as r, isFakeTouchstartFromScreenReader as s, FocusTrapFactory as t, _getFocusedElementPierceShadowDom as u };
+export { ObserversModule as a, _getEventTarget as c, isFakeMousedownFromScreenReader as d, isFakeTouchstartFromScreenReader as f, CdkObserveContent as i, _getFocusedElementPierceShadowDom as l, InteractivityChecker as n, FocusMonitor as o, LiveAnnouncer as r, normalizePassiveListenerOptions as s, FocusTrapFactory as t, _getShadowRoot as u };

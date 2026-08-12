@@ -1,1 +1,51 @@
-<p>user works!</p>
+@if (toyTypes()) {
+  <mat-card class="account-card">
+    <mat-card-header class="account-header">
+      <h1>Account details</h1>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="account-fields">
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input matInput type="email" [(ngModel)]="activeUser!.email" disabled="" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Ime</mat-label>
+          <input matInput type="text" [(ngModel)]="activeUser!.ime" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Prezime</mat-label>
+          <input matInput type="text" [(ngModel)]="activeUser!.prezime" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Telefon</mat-label>
+          <input matInput type="text" [(ngModel)]="activeUser!.telefon" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Adresa</mat-label>
+          <input matInput type="text" [(ngModel)]="activeUser!.adresa" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Omiljena igracka</mat-label>
+          <mat-select [(ngModel)]="activeUser!.igracka">
+            @for (t of toyTypes(); track t) {
+              <mat-option [value]="t.name">{{ t.name }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input matInput type="password" [(ngModel)]="activeUser!.password" />
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button type="button" matButton (click)="updateUser()">
+        <mat-icon fontIcon="check"></mat-icon> Save
+      </button>
+      <button type="button" matButton><mat-icon fontIcon="cancel"></mat-icon> Cancel</button>
+    </mat-card-actions>
+  </mat-card>
+} @else {
+  <app-loading></app-loading>
+}
