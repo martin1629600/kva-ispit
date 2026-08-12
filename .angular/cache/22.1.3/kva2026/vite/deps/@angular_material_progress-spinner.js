@@ -1,8 +1,8 @@
 import { Dr as ViewEncapsulation, El as ɵɵdefineInjector, En as ElementRef, Hs as ɵɵtemplateRefExtractor, In as Input, Nl as ɵɵnamespaceSVG, Rs as ɵɵstyleProp, S as ViewChild, Tc as InjectionToken, Ui as setClassMetadata, Vs as ɵɵtemplate, Xo as ɵɵnextContext, Yo as ɵɵloadQuery, _s as ɵɵqueryRefresh, as as ɵɵproperty, ba as ɵɵclassProp, bo as ɵɵelementStart, cn as Component, eo as ɵɵdefineComponent, go as ɵɵelementContainer, ho as ɵɵelement, jl as ɵɵnamespaceHTML, no as ɵɵdefineNgModule, oc as ɵɵviewQuery, ol as inject, qn as NgModule, rt as numberAttribute, ua as ɵɵadvance, va as ɵɵattribute, ya as ɵɵclassMap, yo as ɵɵelementEnd, ys as ɵɵreference } from "./core-Cz0Y9r6B.js";
 import { n as _getAnimationsState } from "./_animation-chunk-B8zhU6TW.js";
+import { t as BidiModule } from "./bidi-CIMRJ465.js";
 import "./common-Be9KhGNM.js";
 import { r as NgTemplateOutlet } from "./_common_module-chunk-CLpwjLS-.js";
-import { t as BidiModule } from "./bidi-CIMRJ465.js";
 //#region node_modules/@angular/material/fesm2022/progress-spinner.mjs
 var _c0 = ["determinateSpinner"];
 function MatProgressSpinner_ng_template_0_Template(rf, ctx) {

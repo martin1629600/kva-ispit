@@ -2,22 +2,22 @@ import { $n as Output, Do as ɵɵgetInheritedFactory, Dr as ViewEncapsulation, E
 import { t as takeUntil } from "./takeUntil-CvikSTrs.js";
 import { t as merge } from "./merge-C74X_ixQ.js";
 import { t as _animationsDisabled } from "./_animation-chunk-B8zhU6TW.js";
-import { a as ObserversModule, i as CdkObserveContent, l as _getFocusedElementPierceShadowDom } from "./a11y-DZu4eYEJ.js";
+import { t as BidiModule } from "./bidi-CIMRJ465.js";
 import "./common-Be9KhGNM.js";
 import { r as NgTemplateOutlet } from "./_common_module-chunk-CLpwjLS-.js";
 import { t as Platform } from "./_platform-chunk-B3P0jqKZ.js";
 import { n as coerceNumberProperty } from "./_element-chunk-DhzePnMe.js";
 import { t as _CdkPrivateStyleLoader } from "./_style-loader-chunk-BiWphaqx.js";
+import { NG_VALUE_ACCESSOR } from "./@angular_forms.js";
+import { a as ObserversModule, i as CdkObserveContent, l as _getFocusedElementPierceShadowDom } from "./a11y-DZu4eYEJ.js";
 import "./private-BE-0oy_o.js";
 import { t as hasModifierKey } from "./keycodes-BvDTxKgo.js";
 import { t as FocusKeyManager } from "./_focus-key-manager-chunk-D904W-dp.js";
-import { t as BidiModule } from "./bidi-CIMRJ465.js";
-import { r as SelectionModel, t as MatPseudoCheckboxModule } from "./_pseudo-checkbox-module-chunk-BF0BuKAA.js";
-import { NG_VALUE_ACCESSOR } from "./@angular_forms.js";
 import "./platform-drsQxUAh.js";
 import { t as coerceBooleanProperty } from "./coercion-BM5FQA51.js";
-import { i as RippleRenderer, n as MAT_RIPPLE_GLOBAL_OPTIONS, t as _StructuralStylesLoader } from "./_structural-styles-chunk-B35LMqfU.js";
-import { t as MatRippleModule } from "./_ripple-module-chunk-Cf7BYrQV.js";
+import { i as RippleRenderer, n as MAT_RIPPLE_GLOBAL_OPTIONS, t as _StructuralStylesLoader } from "./_structural-styles-chunk-DpTP7HeV.js";
+import { t as MatRippleModule } from "./_ripple-module-chunk-C3lfah6t.js";
+import { r as SelectionModel, t as MatPseudoCheckboxModule } from "./_pseudo-checkbox-module-chunk-BF0BuKAA.js";
 //#region node_modules/@angular/material/fesm2022/divider.mjs
 var MatDivider = class MatDivider {
 	get vertical() {

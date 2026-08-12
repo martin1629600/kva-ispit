@@ -11,6 +11,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ToyModel } from '../../models/toys.models';
 import { ToyService } from '../services/toy.service';
 import { Loading } from '../loading/loading';
+import { Alerts } from '../alerts';
 
 @Component({
   selector: 'app-user',
@@ -40,6 +41,6 @@ export class User {
 
   updateUser() {
     AuthService.updateActiveUser(this.activeUser!);
-    alert('Uspesno sacuvane promene');
+    Alerts.success('Promene sacuvane');
   }
 }

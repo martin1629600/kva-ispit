@@ -1,9 +1,9 @@
 import { Dr as ViewEncapsulation, Ec as Injector, En as ElementRef, In as Input, Pc as NgZone, Tc as InjectionToken, Ui as setClassMetadata, ba as ɵɵclassProp, cn as Component, eo as ɵɵdefineComponent, ol as inject, to as ɵɵdefineDirective, wn as Directive } from "./core-Cz0Y9r6B.js";
 import { t as _animationsDisabled } from "./_animation-chunk-B8zhU6TW.js";
-import { c as _getEventTarget, d as isFakeMousedownFromScreenReader, f as isFakeTouchstartFromScreenReader, s as normalizePassiveListenerOptions } from "./a11y-DZu4eYEJ.js";
 import { t as Platform } from "./_platform-chunk-B3P0jqKZ.js";
 import { t as coerceElement } from "./_element-chunk-DhzePnMe.js";
 import { t as _CdkPrivateStyleLoader } from "./_style-loader-chunk-BiWphaqx.js";
+import { c as _getEventTarget, d as isFakeMousedownFromScreenReader, f as isFakeTouchstartFromScreenReader, s as normalizePassiveListenerOptions } from "./a11y-DZu4eYEJ.js";
 import "./private-BE-0oy_o.js";
 import "./platform-drsQxUAh.js";
 //#region node_modules/@angular/material/fesm2022/_ripple-chunk.mjs

@@ -1,6 +1,6 @@
 import { El as ɵɵdefineInjector, Ui as setClassMetadata, no as ɵɵdefineNgModule, qn as NgModule } from "./core-Cz0Y9r6B.js";
 import { t as BidiModule } from "./bidi-CIMRJ465.js";
-import { r as MatRipple } from "./_structural-styles-chunk-B35LMqfU.js";
+import { r as MatRipple } from "./_structural-styles-chunk-DpTP7HeV.js";
 //#region node_modules/@angular/material/fesm2022/_ripple-module-chunk.mjs
 var MatRippleModule = class MatRippleModule {
 	static ɵfac = function MatRippleModule_Factory(__ngFactoryType__) {

@@ -6,8 +6,8 @@ import { F as finalize, r as DomSanitizer, v as HttpClient } from "./platform-br
 import { t as take } from "./take-CtPHqG3M.js";
 import { t as share } from "./share-nq5UfZ5A.js";
 import { t as tap } from "./tap-oIOh8zpf.js";
-import { r as trustedHTMLFromString } from "./private-BE-0oy_o.js";
 import { t as BidiModule } from "./bidi-CIMRJ465.js";
+import { r as trustedHTMLFromString } from "./private-BE-0oy_o.js";
 //#region node_modules/@angular/material/fesm2022/_icon-registry-chunk.mjs
 function getMatIconNameNotFoundError(iconName) {
 	return Error(`Unable to find icon with the name "${iconName}"`);
