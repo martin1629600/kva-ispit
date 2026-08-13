@@ -1,6 +1,67 @@
 @if (toys().length > 0) {
   <div class="wrapper">
-    @for (t of toys(); track t.toyId) {
+    <mat-drawer-container class="example-container" autosize>
+      <mat-drawer #drawer class="example-sidenav" mode="side">
+        <p>
+          <mat-label>Name</mat-label>
+          <input matInput type="text" [(ngModel)]="searchName" (keyup)="filter()" />
+        </p>
+        <p>
+          <mat-label>Max price</mat-label>
+          <input matInput type="number" [(ngModel)]="selectedPrice" (keyup)="filter()" />
+        </p>
+        <p>
+          <mat-label>Production date</mat-label>
+          <input matInput type="text" [(ngModel)]="selectedYear" (keyup)="filter()" />
+        </p>
+        <p>
+          <mat-label>Type</mat-label>
+
+          <mat-select [(ngModel)]="selectedType" (selectionChange)="filter()">
+            <mat-option value="">All</mat-option>
+
+            @for (type of getToyTypes(); track type) {
+              <mat-option [value]="type">
+                {{ type }}
+              </mat-option>
+            }
+          </mat-select>
+        </p>
+        <p>
+          <mat-label>Age group</mat-label>
+
+          <mat-select [(ngModel)]="selectedAge" (selectionChange)="filter()">
+            <mat-option value="">All</mat-option>
+
+            @for (age of getAgeGroups(); track age) {
+              <mat-option [value]="age">
+                {{ age }}
+              </mat-option>
+            }
+          </mat-select>
+        </p>
+        <p>
+          <mat-label>Target group</mat-label>
+
+          <mat-select [(ngModel)]="selectedTargetGroup" (selectionChange)="filter()">
+            <mat-option value="">All</mat-option>
+
+            @for (target of getTargetGroup(); track target) {
+              <mat-option [value]="target">
+                {{ target }}
+              </mat-option>
+            }
+          </mat-select>
+        </p>
+      </mat-drawer>
+
+      <div class="example-sidenav-content">
+        <button type="button" matButton (click)="drawer.toggle()">
+          <mat-icon fontIcon="filter_alt"></mat-icon>
+        </button>
+      </div>
+    </mat-drawer-container>
+    @for (t of filteredToys(); track t.toyId) {
       <mat-card class="toy-card" appearance="outlined" [routerLink]="`/details/${t.toyId}`">
         <img [src]="utils.getImageUrl(t)" />
         <mat-card-content>

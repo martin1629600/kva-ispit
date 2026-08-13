@@ -1,3 +1,4 @@
+import { ToyService } from './../services/toy.service';
 import { Utils } from './../utils';
 import { appConfig } from './../app.config';
 import { Component, signal } from '@angular/core';
@@ -8,7 +9,6 @@ import { MatListModule } from '@angular/material/list';
 import { AuthService } from '../services/auth.service';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { ToyService } from '../services/toy.service';
 import { Loading } from '../loading/loading';
 import { Alerts } from '../alerts';
 
@@ -20,6 +20,7 @@ import { Alerts } from '../alerts';
 })
 export class Details {
   public service = AuthService;
+  public ToyService = ToyService;
 
   toy = signal<ToyModel | null>(null);
 

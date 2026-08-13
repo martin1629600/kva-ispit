@@ -32,8 +32,6 @@ export class App {
 
   constructor(private router: Router) {}
 
-  searchName = '';
-
   doLogout() {
     AuthService.logout();
     this.router.navigate(['/login']);
