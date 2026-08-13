@@ -1,3 +1,4 @@
+import { email } from '@angular/forms/signals';
 import { UserModel } from '../../models/user.model';
 
 const USERS = 'users';
@@ -29,6 +30,18 @@ export class AuthService {
       }
     }
     return false;
+  }
+
+  static registerUser(user: UserModel) {
+    const users = this.getUsers();
+    for (let u of users) {
+      if (u.email === user.email) {
+        return false;
+      }
+    }
+    users.push(user);
+    localStorage.setItem(USERS, JSON.stringify(users));
+    return true;
   }
 
   static getActiveUser(): UserModel | null {
@@ -68,5 +81,95 @@ export class AuthService {
 
   static logout() {
     localStorage.removeItem(ACTIVE);
+  }
+
+  static createOrder(toyId: number) {
+    const users = this.getUsers();
+
+    for (let u of users) {
+      if (u.email === localStorage.getItem(ACTIVE)) {
+        u.orders.push({
+          toyId: toyId,
+          status: 'reserved',
+          quantity: 1,
+        });
+        localStorage.setItem(USERS, JSON.stringify(users));
+      }
+    }
+  }
+
+  static cancelOrder(toyId: number) {
+    const users = this.getUsers();
+
+    for (let u of users) {
+      if (u.email === localStorage.getItem(ACTIVE)) {
+        for (let order of u.orders) {
+          if (toyId === order.toyId) {
+            order.status = 'canceled';
+          }
+        }
+      }
+    }
+    localStorage.setItem(USERS, JSON.stringify(users));
+  }
+
+  static deleteOrder(toyId: number) {
+    const users = this.getUsers();
+
+    for (let u of users) {
+      if (u.email === localStorage.getItem(ACTIVE)) {
+        for (let order of u.orders) {
+          if (
+            toyId === order.toyId &&
+            (order.status == 'delivered' || order.status == 'canceled')
+          ) {
+            u.orders.splice(u.orders.indexOf(order), 1);
+          }
+        }
+      }
+    }
+    localStorage.setItem(USERS, JSON.stringify(users));
+  }
+
+  static changeStatus(toyId: number) {
+    const users = this.getUsers();
+    for (let u of users) {
+      if (u.email === localStorage.getItem(ACTIVE)) {
+        for (let order of u.orders) {
+          if (toyId === order.toyId && order.status == 'reserved') {
+            order.status = 'delivered';
+          }
+        }
+      }
+    }
+    localStorage.setItem(USERS, JSON.stringify(users));
+  }
+
+  static updateQuantity(toyId: number, quantity: number) {
+    const users = this.getUsers();
+    for (let u of users) {
+      if (u.email === localStorage.getItem(ACTIVE)) {
+        for (let order of u.orders) {
+          if (toyId === order.toyId && order.status == 'reserved') {
+            order.quantity = quantity;
+          }
+        }
+      }
+    }
+    localStorage.setItem(USERS, JSON.stringify(users));
+  }
+
+  static rateOrder(toyId: number, rating: number) {
+    const users = this.getUsers();
+    for (let u of users) {
+      if (u.email === localStorage.getItem(ACTIVE)) {
+        for (let order of u.orders) {
+          if (toyId === order.toyId && order.status == 'delivered') {
+            order.rating = rating;
+          }
+        }
+      }
+    }
+    localStorage.setItem(USERS, JSON.stringify(users));
   }
 }

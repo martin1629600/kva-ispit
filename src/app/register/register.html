@@ -1,0 +1,50 @@
+<mat-card class="login-card">
+  <mat-card-header class="login-header">
+    <h1>Register</h1>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="login-fields">
+      <mat-form-field>
+        <mat-label>Ime</mat-label>
+        <input matInput type="text" [(ngModel)]="ime" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Prezime</mat-label>
+        <input matInput type="text" [(ngModel)]="prezime" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput type="email" [(ngModel)]="email" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput type="password" [(ngModel)]="password" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Repeat password</mat-label>
+        <input matInput type="password" [(ngModel)]="passwordRepeat" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Broj telefona</mat-label>
+        <input matInput type="text" [(ngModel)]="telefon" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Adresa</mat-label>
+        <input matInput type="text" [(ngModel)]="adresa" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Omiljena igracka</mat-label>
+        <mat-select [(ngModel)]="igracka">
+          @for (t of toyTypes(); track t) {
+            <mat-option [value]="t.name">{{ t.name }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button type="button" matButton (click)="doRegister()">
+      <mat-icon fontIcon="app_registration"></mat-icon> Submit
+    </button>
+  </mat-card-actions>
+</mat-card>

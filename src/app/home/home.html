@@ -11,7 +11,7 @@
         </mat-card-content>
         <mat-card-actions>
           @if (service.getActiveUser()) {
-            <button matButton (click)="$event.stopPropagation()">
+            <button matButton (click)="$event.stopPropagation(); addToCart(t.toyId)">
               Add to cart <mat-icon fontIcon="add_shopping_cart"></mat-icon>
             </button>
           }

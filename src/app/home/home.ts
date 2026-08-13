@@ -9,6 +9,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { AuthService } from '../services/auth.service';
 import { ToyService } from '../services/toy.service';
 import { Loading } from '../loading/loading';
+import { Alerts } from '../alerts';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-home',
   imports: [
@@ -26,12 +29,26 @@ export class Home {
   public service = AuthService;
   toys = signal<ToyModel[]>([]);
 
-  constructor(public utils: Utils) {
+  constructor(
+    public utils: Utils,
+    private router: Router,
+  ) {
     ToyService.getToys().then((rsp) => {
       const sorted = rsp.data.sort((t1, t2) => {
         return t1.price - t2.price;
       });
       this.toys.set(rsp.data);
     });
+  }
+
+  addToCart(toyId: number) {
+    if (!AuthService.getActiveUser()) {
+      this.router.navigate(['/login']);
+      return;
+    }
+
+    AuthService.createOrder(toyId);
+
+    Alerts.success('Successfully reserved');
   }
 }

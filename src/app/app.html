@@ -2,8 +2,8 @@
   <span>Prodavnica igracaka</span>
   <span class="spacer"></span>
   <a routerLink="/" matButton="">Home <mat-icon fontIcon="home"></mat-icon></a>
-  <a routerLink="/about" matButton="">About <mat-icon fontIcon="info"></mat-icon> </a>
   @if (service.getActiveUser()) {
+    <a routerLink="/cart" matButton="">Cart <mat-icon fontIcon="shopping_cart"></mat-icon> </a>
     <button matButton [matMenuTriggerFor]="afterMenu">
       Korisnik
       <mat-icon fontIcon="account_circle"></mat-icon>
@@ -14,6 +14,9 @@
     </mat-menu>
   } @else {
     <a routerLink="/login" matButton="">Login<mat-icon fontIcon="login"></mat-icon></a>
+    <a routerLink="/register" matButton=""
+      >Register<mat-icon fontIcon="app_registration"></mat-icon
+    ></a>
   }
 </mat-toolbar>
 <div class="wrapper">

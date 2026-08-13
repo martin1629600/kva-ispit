@@ -10,6 +10,7 @@ import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { ToyService } from '../services/toy.service';
 import { Loading } from '../loading/loading';
+import { Alerts } from '../alerts';
 
 @Component({
   selector: 'app-details',
@@ -30,5 +31,15 @@ export class Details {
       const toyId = params['toyId'];
       ToyService.getToyById(toyId).then((rsp) => this.toy.set(rsp.data));
     });
+  }
+
+  addToCart() {
+    if (this.toy() == null) {
+      return;
+    }
+
+    AuthService.createOrder(this.toy()!.toyId);
+
+    Alerts.success('Successfully reserved');
   }
 }
