@@ -1,6 +1,17 @@
 <mat-toolbar>
   <span>Prodavnica igracaka</span>
   <span class="spacer"></span>
+  <mat-form-field>
+    <mat-label>Search</mat-label>
+
+    <input matInput type="text" [(ngModel)]="searchName" />
+
+    @if (searchName) {
+      <button matSuffix matIconButton (click)="searchName = ''">
+        <mat-icon>close</mat-icon>
+      </button>
+    }
+  </mat-form-field>
   <a routerLink="/" matButton="">Home <mat-icon fontIcon="home"></mat-icon></a>
   @if (service.getActiveUser()) {
     <a routerLink="/cart" matButton="">Cart <mat-icon fontIcon="shopping_cart"></mat-icon> </a>
