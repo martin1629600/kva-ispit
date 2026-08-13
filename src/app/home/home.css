@@ -28,3 +28,28 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.filter-container {
+  position: fixed;
+  left: 0;
+  top: 80px;
+
+  width: 300px;
+  height: calc(100vh - 80px);
+
+  z-index: 1000;
+  background: transparent;
+
+  pointer-events: none;
+}
+
+.filter-sidenav {
+  width: 250px;
+  padding: 20px;
+  pointer-events: auto;
+}
+
+.filter-button-container {
+  pointer-events: auto;
+  background: transparent;
+}

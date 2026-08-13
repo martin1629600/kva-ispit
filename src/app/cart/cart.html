@@ -1,42 +1,69 @@
-<h1>Cart</h1>
+<h1 class="cart-title">Cart</h1>
 
 @if (toys().length > 0) {
-  @for (t of toys(); track t.toyId) {
-    <div>
-      <h3>{{ t.name }}</h3>
-      <p>{{ t.price * (getQuantity(t.toyId) ?? 1) }} RSD</p>
-      <p>{{ getStatus(t.toyId) }}</p>
-      @if (getStatus(t.toyId) == 'delivered' && !getRating(t.toyId)) {
-        @for (r of ratings; track r) {
-          <button mat-icon-button (click)="rate(t.toyId, r)">
-            <mat-icon>star</mat-icon>
-          </button>
-        }
-      } @else if (getStatus(t.toyId) == 'delivered' && getRating(t.toyId)) {
-        <p>Your rating: {{ getRating(t.toyId) }} <mat-icon>star</mat-icon></p>
-      }
-      @if (getStatus(t.toyId) == 'reserved') {
-        <button type="button" matButton="" (click)="cancelOrder(t.toyId)">Cancel order</button>
-        <button type="button" matButton="" (click)="changeOrderStatus(t.toyId)">
-          Change to delivered
-        </button>
-        <mat-form-field>
-          <mat-label>How many</mat-label>
-          <mat-select
-            [value]="getQuantity(t.toyId)"
-            (selectionChange)="changeQuantity(t.toyId, $event.value)"
-          >
-            @for (q of quantityOptions; track q) {
-              <mat-option [value]="q">{{ q }}</mat-option>
+  <div class="cart-wrapper">
+    @for (t of toys(); track t.toyId) {
+      <mat-list class="cart-list" role="list">
+        <mat-list-item class="cart-item" role="listitem">
+          <div class="cart-content">
+            <div class="cart-info">
+              <span><strong>Ime:</strong> {{ t.name }}</span>
+              <span><strong>Cena:</strong> {{ t.price }} RSD</span>
+              <span><strong>Status:</strong> {{ getStatus(t.toyId) }}</span>
+            </div>
+
+            @if (getStatus(t.toyId) == 'delivered' && !getRating(t.toyId)) {
+              <div class="rating-section">
+                <span>Rate:</span>
+
+                @for (r of ratings; track r) {
+                  <button mat-icon-button (click)="rate(t.toyId, r)">
+                    <mat-icon>star</mat-icon>
+                  </button>
+                }
+              </div>
+            } @else if (getStatus(t.toyId) == 'delivered' && getRating(t.toyId)) {
+              <div class="rating-section">
+                <span>
+                  Your rating: {{ getRating(t.toyId) }}
+                  <mat-icon>star</mat-icon>
+                </span>
+              </div>
             }
-          </mat-select>
-        </mat-form-field>
-      } @else {
-        <button type="button" matButton="" (click)="deleteOrder(t.toyId)">Delete order</button>
-      }
-    </div>
-  }
-  <p>Total price: {{ getTotalPrice() }}</p>
+
+            @if (getStatus(t.toyId) == 'reserved') {
+              <div class="cart-actions">
+                <button type="button" matButton (click)="cancelOrder(t.toyId)">Cancel order</button>
+
+                <button type="button" matButton (click)="changeOrderStatus(t.toyId)">
+                  Change to delivered
+                </button>
+
+                <mat-form-field class="quantity-field">
+                  <mat-label>How many</mat-label>
+
+                  <mat-select
+                    [value]="getQuantity(t.toyId)"
+                    (selectionChange)="changeQuantity(t.toyId, $event.value)"
+                  >
+                    @for (q of quantityOptions; track q) {
+                      <mat-option [value]="q">{{ q }}</mat-option>
+                    }
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            } @else {
+              <div class="cart-actions">
+                <button type="button" matButton (click)="deleteOrder(t.toyId)">Delete order</button>
+              </div>
+            }
+          </div>
+        </mat-list-item>
+      </mat-list>
+    }
+  </div>
+
+  <p class="total-price">Total price: {{ getTotalPrice() }} RSD</p>
 } @else {
-  <p>Korpa je prazna.</p>
+  <p class="empty-cart">Korpa je prazna.</p>
 }

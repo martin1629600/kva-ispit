@@ -8,10 +8,11 @@ import { Alerts } from '../alerts';
 import { OrderModel } from '../../models/order.model';
 import { MatFormField, MatLabel, MatOption, MatSelect } from '@angular/material/select';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
+import { MatList, MatListItem, MatListModule } from '@angular/material/list';
 
 @Component({
   selector: 'app-cart',
-  imports: [MatAnchor, MatSelect, MatFormField, MatLabel, MatOption, MatIconModule],
+  imports: [MatAnchor, MatSelect, MatFormField, MatLabel, MatOption, MatIconModule, MatListModule],
   templateUrl: './cart.html',
   styleUrl: './cart.css',
 })
