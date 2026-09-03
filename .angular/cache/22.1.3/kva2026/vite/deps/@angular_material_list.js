@@ -15,8 +15,7 @@ import { t as hasModifierKey } from "./keycodes-BvDTxKgo.js";
 import { t as FocusKeyManager } from "./_focus-key-manager-chunk-D904W-dp.js";
 import "./platform-drsQxUAh.js";
 import { t as coerceBooleanProperty } from "./coercion-BM5FQA51.js";
-import { i as RippleRenderer, n as MAT_RIPPLE_GLOBAL_OPTIONS, t as _StructuralStylesLoader } from "./_structural-styles-chunk-DpTP7HeV.js";
-import { t as MatRippleModule } from "./_ripple-module-chunk-C3lfah6t.js";
+import { a as RippleRenderer, n as _StructuralStylesLoader, r as MAT_RIPPLE_GLOBAL_OPTIONS, t as MatRippleModule } from "./_ripple-module-chunk-D_Hq1QN0.js";
 import { r as SelectionModel, t as MatPseudoCheckboxModule } from "./_pseudo-checkbox-module-chunk-BF0BuKAA.js";
 //#region node_modules/@angular/material/fesm2022/divider.mjs
 var MatDivider = class MatDivider {

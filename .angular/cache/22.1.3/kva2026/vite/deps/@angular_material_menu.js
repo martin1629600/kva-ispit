@@ -15,8 +15,7 @@ import { t as hasModifierKey } from "./keycodes-BvDTxKgo.js";
 import { t as FocusKeyManager } from "./_focus-key-manager-chunk-D904W-dp.js";
 import { t as _IdGenerator } from "./_id-generator-chunk-D1kcbHj7.js";
 import "./platform-drsQxUAh.js";
-import { r as MatRipple, t as _StructuralStylesLoader } from "./_structural-styles-chunk-DpTP7HeV.js";
-import { t as MatRippleModule } from "./_ripple-module-chunk-C3lfah6t.js";
+import { i as MatRipple, n as _StructuralStylesLoader, t as MatRippleModule } from "./_ripple-module-chunk-D_Hq1QN0.js";
 //#region node_modules/rxjs/dist/esm5/internal/operators/skipWhile.js
 function skipWhile(predicate) {
 	return operate(function(source, subscriber) {

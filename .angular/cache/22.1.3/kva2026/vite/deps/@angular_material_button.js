@@ -6,8 +6,7 @@ import { t as _CdkPrivateStyleLoader } from "./_style-loader-chunk-BiWphaqx.js";
 import { c as _getEventTarget, o as FocusMonitor } from "./a11y-DZu4eYEJ.js";
 import "./private-BE-0oy_o.js";
 import "./platform-drsQxUAh.js";
-import { a as defaultRippleAnimationConfig, i as RippleRenderer, n as MAT_RIPPLE_GLOBAL_OPTIONS, t as _StructuralStylesLoader } from "./_structural-styles-chunk-DpTP7HeV.js";
-import { t as MatRippleModule } from "./_ripple-module-chunk-C3lfah6t.js";
+import { a as RippleRenderer, n as _StructuralStylesLoader, o as defaultRippleAnimationConfig, r as MAT_RIPPLE_GLOBAL_OPTIONS, t as MatRippleModule } from "./_ripple-module-chunk-D_Hq1QN0.js";
 //#region node_modules/@angular/material/fesm2022/_ripple-loader-chunk.mjs
 var eventListenerOptions = { capture: true };
 var rippleInteractionEvents = [

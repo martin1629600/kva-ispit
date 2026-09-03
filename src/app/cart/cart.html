@@ -8,8 +8,38 @@
           <div class="cart-content">
             <div class="cart-info">
               <span><strong>Ime:</strong> {{ t.name }}</span>
-              <span><strong>Cena:</strong> {{ t.price }} RSD</span>
-              <span><strong>Status:</strong> {{ getStatus(t.toyId) }}</span>
+              
+              <span>
+                <strong>Tip:</strong> {{ t.type.name }}
+              </span>
+
+              <span>
+                <strong>Uzrast:</strong> {{ t.ageGroup.name }}
+              </span>
+
+              <span>
+                <strong>Ciljna grupa:</strong> {{ t.targetGroup }}
+              </span>
+
+              <span>
+                <strong>Datum proizvodnje:</strong> {{ t.productionDate }}
+              </span>
+
+              <span>
+                <strong>Opis:</strong> {{ t.description }}
+              </span>
+
+              <span>
+                <strong>Količina:</strong> {{ getQuantity(t.toyId) }}
+              </span>
+
+              <span>
+                <strong>Cena:</strong> {{ t.price }} RSD
+              </span>
+
+              <span>
+                <strong>Status:</strong> {{ getStatus(t.toyId) }}
+              </span>
             </div>
 
             @if (getStatus(t.toyId) == 'delivered' && !getRating(t.toyId)) {

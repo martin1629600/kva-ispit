@@ -19,6 +19,13 @@
               >Production date: {{ utils.formatDate(toy()!.productionDate) }}</span
             >
           </mat-list-item>
+          <mat-list-item>
+            <span matListItemTitle>Type: {{ toy()?.type?.name }}</span>
+          </mat-list-item>
+
+          <mat-list-item>
+            <span matListItemTitle>Age group: {{ toy()?.ageGroup?.name }}</span>
+          </mat-list-item>
           <mat-list-item>Price: {{ toy()?.price }}</mat-list-item>
           <mat-list-item>Review: {{ ToyService.getReview(toy()!.toyId) }}</mat-list-item>
         </mat-list>
